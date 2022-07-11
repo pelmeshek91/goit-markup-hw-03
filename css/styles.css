@@ -16,6 +16,14 @@
     --accent-link: rgba(255, 255, 255, 0.6);
 }
 
+html {
+	box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
 body {
     font-family: "Roboto", sans-serif;
     color: var(--secondary-title-color);
@@ -26,15 +34,42 @@ body {
 
 button {
     cursor: pointer;
+    border: 1px solid transparent;
 }
 
+
+/* Стили для обнуления верхних отступов у элементов */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
+/* Класс для обнуления базовых свойств у списков (ul) */
 .list {
-    list-style: none;
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+/* Класс для обнуления базовых свойств у ссылок */
+.link {
+	text-decoration: none;
+	color: inherit;
+}
+/* Свойства для корректного отображения картинок */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+/* Свойства для обнуления курсива у address */
+address {
+	font-style: normal;
 }
 
-.link {
-    text-decoration: none;
-}
 .visually-hidden { 
     position: absolute; 
     width: 1px; 
@@ -47,8 +82,22 @@ button {
     clip: rect(0 0 0 0); 
     overflow: hidden; 
     }
+/* General class */
+
+.container {
+ width: 1200px;
+  padding: 0 15px;
+ margin: 0 auto;
+}
 
 /* ----------------HEADER------------------- */
+.header {
+    border-bottom: 1px solid #ececec;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+  }
 .logo {
     font-family: "Raleway";
     font-weight: 700;
@@ -63,8 +112,14 @@ button {
 .logo-second-text {
     color: var(--secondary-text-color);
 }
+.nav-list {
+    display: flex;
+}
 
 .nav-item-link {
+    display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -79,7 +134,9 @@ button {
 .nav-item-link.current {
     color: var(--accent-color);
 }
-
+.header-list {
+    display: flex;
+}
 .header-item-link {
     font-weight: 500;
     line-height: 1.14;

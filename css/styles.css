@@ -90,7 +90,9 @@ address {
 }
 
 /* ----------------HEADER------------------- */
-
+.header {
+    border-bottom: 1px solid #ececec;}
+    
 .nav {
   display: flex;
   align-items: center;

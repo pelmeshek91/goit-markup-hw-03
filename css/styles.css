@@ -169,7 +169,7 @@ address {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 30px;
-  width: 100%;
+  width: 696px;
 
   font-weight: 900;
   font-size: 44px;
@@ -196,23 +196,70 @@ address {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.section-reason {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.reason-list,
+.work-list,
+.team-list {
+  display: flex;
+  margin-right: -30px;
+}
+
+.reason-item,
+.team-item {
+  margin-right: 30px;
+  flex-basis: calc((100% - 120px) / 4);
+}
+.reason-item:last-child,
+.work-item:last-child,
+.team-item:last-child {
+  margin-right: 0;
+}
 .reason-title {
-  font-size: 14px;
-  line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-title-color);
+  margin-bottom: 10px;
 }
 
 .reason-description {
   line-height: 1.71;
   color: var(--main-text-color);
 }
-
-.work-title .team-title {
+.work {
+  margin-top: -94px;
+}
+.no-gap {
+  display: block;
+}
+.work-title,
+.team-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--secondary-title-color);
+}
+.work-title, .team-title {
+  margin-bottom: 50px;
+}
+.work-item {
+  margin-right: 30px;
+  flex-basis: calc((100% - 90px) / 3);
+}
+.team {
+  background-color: var(--accent-color-btn);
+}
+.team-item {
+  background: var(--main-title-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-wrapper {
+    padding: 30px 59px;
+  text-align: center;
 }
 .team-member {
   font-weight: 500;
@@ -221,7 +268,7 @@ address {
   text-align: center;
 }
 
-.team-member-expert {
+.team-description {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -266,24 +313,30 @@ address {
 /* -------------FOOTER------------------ */
 .footer {
   background-color: #2f303a;
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
 .logo-footer-text {
   color: var(--main-title-color);
 }
-
-.contact-address-link {
+.footer-address {
+    margin-top: 20px;
+}
+.footer-address-link {
   font-style: normal;
   line-height: 1.71;
   color: var(--main-title-color);
 }
-
-.contact-link:hover,
-.contact-link:focus {
+.footer-item:not(:last-child) {
+margin-bottom: 9px;
+}
+.footer-link:hover,
+.footer-link:focus {
   color: var(--accent-color);
 }
 
-.contact-link {
+.footer-link {
   font-style: normal;
   line-height: 1.71;
   color: var(--accent-link);

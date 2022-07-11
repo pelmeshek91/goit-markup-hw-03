@@ -322,6 +322,9 @@ address {
 }
 .portfolio-wrapper {
   padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 .portfolio-work-name {
   margin-bottom: 4px;
